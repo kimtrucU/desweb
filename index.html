@@ -332,6 +332,47 @@
     </div>
   </footer>
 
+  <!-- Chatbot AI nổi góc phải dưới -->
+  <button class="chat-toggle" id="chatToggle" aria-label="Open chat">Chat</button>
+
+  <div class="chatbot" id="chatbot" aria-hidden="true">
+    <div class="chat-header">
+      <div class="chat-header-left">
+        <div class="chat-avatar">🤖</div>
+        <div>
+          <h3>Pawsie Assistant</h3>
+          <p>Tư vấn viên AI trực tuyến 24/7</p>
+        </div>
+      </div>
+      <button class="close-chat" id="closeChat" aria-label="Close chat">&times;</button>
+    </div>
+
+    <div class="chat-body">
+      <div class="chat-messages" id="chatMessages">
+        <div class="message bot-message">
+          🐶 <strong>BẢNG GIÁ SPA</strong><br><br>
+          • Dưới 5kg: Gói tắm 150k | Gói cắt tỉa tạo kiểu 300k<br>
+          • Từ 5kg - 10kg: Gói tắm 250k | Gói cắt tỉa tạo kiểu 450k<br>
+          • Từ 10kg - 20kg: Gói tắm 350k | Gói cắt tỉa tạo kiểu 600k<br>
+          • Đối với cún trên 20kg hoặc lông rối nặng, các chuyên gia sẽ báo giá trực tiếp sau khi kiểm tra tình trạng lông.
+        </div>
+      </div>
+
+      <div class="chat-suggestions">
+        <button type="button" class="suggestion-btn">Dịch vụ Spa</button>
+        <button type="button" class="suggestion-btn">🎁 Khuyến mãi hot</button>
+        <button type="button" class="suggestion-btn">💰 Bảng giá Spa</button>
+        <button type="button" class="suggestion-btn">Huấn luyện chó</button>
+        <button type="button" class="suggestion-btn">Liên hệ tư vấn</button>
+      </div>
+    </div>
+
+    <div class="chat-footer">
+      <input type="text" id="chatInput" placeholder="Hỏi Pawsie về Spa & Ưu đãi..." autocomplete="off" />
+      <button type="button" id="sendBtn" aria-label="Send message">➤</button>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
