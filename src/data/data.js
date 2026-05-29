@@ -15,7 +15,6 @@ export const services = [
     icon: "🥗",
   },
 ];
-
 export const whyChoose = [
   "Huấn luyện viên giàu kinh nghiệm",
   "Cơ sở vật chất hiện đại, sạch sẽ",
