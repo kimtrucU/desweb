@@ -1,0 +1,21 @@
+/* globals.css – cấu hình Tailwind và font Poppins */
+
+/* Import font Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font mặc định */
+html, body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Màu tùy chỉnh */
+:root {
+  --color-primary: #8cc76f;   /* xanh lá */
+  --color-light:   #8fc7d3;   /* xanh nhạt */
+  --color-dark:    #222222;   /* đen */
+}
