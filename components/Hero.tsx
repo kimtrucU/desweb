@@ -28,19 +28,23 @@ export default function Hero() {
   };
 
   return (
-    <section className="bg-gray-100 py-20" id="hero">
-      <div className="container text-center">
-        <h1 className="font-montserrat text-4xl md:text-5xl text-dark mb-4">
-          Transform Your Dog’s Life
-        </h1>
-        <p className="text-lg text-gray-700 mb-8">
-          Professional training, personalized programs, and lifelong results.
-        </p>
+        <section className="bg-gray-100 py-20" id="hero">
+          <div className="container flex flex-col lg:flex-row items-center justify-between gap-8">
+            {/* Text side */}
+            <div className="lg:w-1/2 text-center lg:text-left">
+              <h1 className="font-montserrat text-3xl sm:text-4xl md:text-5xl text-dark mb-4">
+                Transform Your Dog’s Life
+              </h1>
+              <p className="text-base sm:text-lg text-gray-700 mb-6">
+                Professional training, personalized programs, and lifelong results.
+              </p>
+            </div>
 
-        <form
-          className="max-w-xl mx-auto bg-white p-6 rounded-lg shadow-md"
-          onSubmit={handleSubmit}
-        >
+            {/* Form side */}
+            <form
+              className="w-full lg:w-1/2 max-w-md mx-auto bg-white p-6 rounded-lg shadow-md"
+              onSubmit={handleSubmit}
+            >
           <h2 className="font-montserrat text-2xl text-dark mb-4 text-left">
             Free Consultation
           </h2>

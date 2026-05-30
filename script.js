@@ -15,7 +15,7 @@ ham.addEventListener('click', () => {
   const open = nav.classList.toggle('open');
   const [s0, s1, s2] = ham.querySelectorAll('span');
   s0.style.transform = open ? 'rotate(45deg) translate(5px,5px)' : '';
-  s1.style.opacity   = open ? '0' : '';
+  s1.style.opacity = open ? '0' : '';
   s2.style.transform = open ? 'rotate(-45deg) translate(5px,-5px)' : '';
 });
 nav.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () => {
@@ -25,12 +25,12 @@ nav.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () =>
 
 /* ── Active nav on scroll ── */
 const sections = [
-  { id: 'hero',         nl: 'nl-home' },
-  { id: 'services',     nl: 'nl-group' },
-  { id: 'puppy',        nl: 'nl-puppy' },
-  { id: 'behavior',     nl: 'nl-behavior' },
-  { id: 'about',        nl: 'nl-about' },
-  { id: 'blog',         nl: 'nl-blog' },
+  { id: 'hero', nl: 'nl-home' },
+  { id: 'services', nl: 'nl-group' },
+  { id: 'puppy', nl: 'nl-puppy' },
+  { id: 'behavior', nl: 'nl-behavior' },
+  { id: 'about', nl: 'nl-about' },
+  { id: 'blog', nl: 'nl-blog' },
 ];
 function updateNav() {
   const y = window.scrollY + 140;
@@ -88,11 +88,11 @@ function showToast(msg, color) {
 /* ── Consultation form ── */
 document.getElementById('consultForm').addEventListener('submit', e => {
   e.preventDefault();
-  const name  = document.getElementById('f-name').value.trim();
+  const name = document.getElementById('f-name').value.trim();
   const email = document.getElementById('f-email').value.trim();
   const phone = document.getElementById('f-phone').value.trim();
-  const dog   = document.getElementById('f-dog').value.trim();
-  const int_  = document.getElementById('f-interest').value;
+  const dog = document.getElementById('f-dog').value.trim();
+  const int_ = document.getElementById('f-interest').value;
 
   if (!name || !email || !phone || !dog || !int_) {
     showToast('Please fill in all fields.', '#c0392b'); return;

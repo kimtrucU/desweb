@@ -7,7 +7,7 @@
 
 /* Global typography */
 html, body {
-  @apply font-opensans antialiased text-gray-800 bg-white;
+  @apply font-opensans antialiased text-gray-800 bg-white overflow-x-hidden;
 }
 
 /* Smooth scroll for anchor links */
@@ -17,5 +17,10 @@ html {
 
 /* Container max‑width – matches the original layout */
 .container {
-  @apply max-w-7xl mx-auto px-4;
+  @apply max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-7;
+}
+
+/* Ensure page content isn’t hidden behind sticky bottom bar */
+body {
+  @apply pb-24;
 }
