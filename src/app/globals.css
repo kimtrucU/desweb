@@ -1,21 +1,21 @@
-/* globals.css – cấu hình Tailwind và font Poppins */
-
-/* Import font Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
-/* Tailwind directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Font mặc định */
+/* Google fonts – same as the original site */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600&display=swap');
+
+/* Global typography */
 html, body {
-  font-family: 'Poppins', sans-serif;
+  @apply font-opensans antialiased text-gray-800 bg-white;
 }
 
-/* Màu tùy chỉnh */
-:root {
-  --color-primary: #8cc76f;   /* xanh lá */
-  --color-light:   #8fc7d3;   /* xanh nhạt */
-  --color-dark:    #222222;   /* đen */
+/* Smooth scroll for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Container max‑width – matches the original layout */
+.container {
+  @apply max-w-7xl mx-auto px-4;
 }

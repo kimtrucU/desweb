@@ -159,43 +159,64 @@
 <!-- ===================== SCHEDULE ===================== -->
 <section class="schedule-sec" id="puppy">
   <div class="container">
-    <h2 class="sec-title">Schedule &amp; Upcoming Classes</h2>
-    <div class="chalkboard">
-      <div class="chalk-grid">
-        <div class="chalk-col">
-          <h3 class="chalk-head">Puppy Kindergarten</h3>
-          <p>Tuesdays &amp; Thursdays</p>
-          <p>6:00 PM – 7:00 PM</p>
-          <p class="chalk-note">Ages 8–16 weeks</p>
-        </div>
-        <div class="chalk-col">
-          <h3 class="chalk-head">Basic Obedience</h3>
-          <p>Saturdays</p>
-          <p>9:00 AM – 10:30 AM</p>
-          <p class="chalk-note">All breeds welcome</p>
-        </div>
-        <div class="chalk-col">
-          <h3 class="chalk-head">Advanced Obedience</h3>
-          <p>Saturdays</p>
-          <p>11:00 AM – 12:30 PM</p>
-          <p class="chalk-note">Must complete Basic first</p>
-        </div>
-        <div class="chalk-col">
-          <h3 class="chalk-head">Private Sessions</h3>
-          <p>By Appointment</p>
-          <p>Mon – Fri</p>
-          <p class="chalk-note">Flexible scheduling</p>
-        </div>
-      </div>
-      <div class="chalk-tags">
-        <span>ALL LEVELS</span>
-        <span>ALL BREEDS</span>
-        <span>ALL TEMPERAMENTS</span>
-      </div>
-      <div class="chalk-dogs">🐕 🐩 🐕‍🦺 🦮 🐾</div>
+
+    <!-- Section header -->
+    <p class="schedule-eyebrow">Class Schedule</p>
+    <h2 class="sec-title" style="margin-bottom:10px;">Schedule &amp; Upcoming Classes</h2>
+    <div class="schedule-underline"></div>
+    <p class="schedule-subtitle">Choose the class that best fits your dog's stage of development and register today.</p>
+
+    <!-- Tabs (outside board) -->
+    <div class="sb-tabs" id="sbTabs">
+      <button class="sb-tab" data-tab="puppy-preschool">Puppy Preschool</button>
+      <button class="sb-tab" data-tab="middle-school">Middle School</button>
+      <button class="sb-tab" data-tab="finishing-school">Finishing School</button>
+      <button class="sb-tab" data-tab="upcoming">Upcoming Classes</button>
     </div>
+
+    <!-- Chalkboard frame -->
+    <div class="sb-frame">
+      <div class="sb-board">
+
+        <!-- Corner chalk decorations -->
+        <span class="sb-deco sb-deco-tl">🦴</span>
+        <span class="sb-deco sb-deco-tr">🐾</span>
+        <span class="sb-deco sb-deco-br">🐕</span>
+
+        <!-- Board title -->
+        <h3 class="sb-title" id="sbBoardTitle">Puppy Preschool (Puppies 2 – 6 months old)</h3>
+        <div class="sb-divider"></div>
+
+        <!-- DESKTOP TABLE -->
+        <div class="sb-table-wrap">
+          <table class="sb-table" id="sbTable">
+            <thead>
+              <tr>
+                <th>Class</th>
+                <th>Schedule</th>
+                <th>Time</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="sbTbody">
+              <!-- filled by JS -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- MOBILE CARDS -->
+        <div class="sb-cards" id="sbCards">
+          <!-- filled by JS -->
+        </div>
+
+        <p class="sb-footer-note">* Schedules subject to change. Contact us to confirm availability.</p>
+      </div>
+    </div>
+
   </div>
 </section>
+
 
 <!-- ===================== AFTER TRAINING ===================== -->
 <section class="after-sec" id="after">
