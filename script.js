@@ -1,108 +1,142 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const navToggle = document.querySelector('.nav-toggle');
-  const nav = document.querySelector('.site-nav');
+/* Kim The Dog Trainer – script.js */
 
-  navToggle.addEventListener('click', function () {
-    nav.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', nav.classList.contains('open'));
-  });
+/* ── Sticky navbar ── */
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.style.boxShadow = window.scrollY > 10
+    ? '0 4px 22px rgba(0,0,0,.13)'
+    : '0 2px 12px rgba(0,0,0,.07)';
+}, { passive: true });
 
-  const form = document.getElementById('consultForm');
-  form.addEventListener('submit', function (event) {
-    event.preventDefault();
-    alert('Thank you! Your consultation request has been submitted. We will contact you soon.');
-    form.reset();
-  });
+/* ── Hamburger ── */
+const ham = document.getElementById('hamburger');
+const nav = document.getElementById('navLinks');
+ham.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  const [s0, s1, s2] = ham.querySelectorAll('span');
+  s0.style.transform = open ? 'rotate(45deg) translate(5px,5px)' : '';
+  s1.style.opacity   = open ? '0' : '';
+  s2.style.transform = open ? 'rotate(-45deg) translate(5px,-5px)' : '';
+});
+nav.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () => {
+  nav.classList.remove('open');
+  ham.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+}));
 
-  // Chatbot AI logic
-  const chatToggle = document.getElementById('chatToggle');
-  const chatbot = document.getElementById('chatbot');
-  const closeChat = document.getElementById('closeChat');
-  const chatInput = document.getElementById('chatInput');
-  const sendBtn = document.getElementById('sendBtn');
-  const chatMessages = document.getElementById('chatMessages');
-  const suggestionButtons = document.querySelectorAll('.suggestion-btn');
-
-  const defaultReply = 'Bạn có thể hỏi về dịch vụ spa, bảng giá, ưu đãi, huấn luyện chó hoặc thông tin liên hệ.';
-
-  function addChatMessage(text, isUser) {
-    const message = document.createElement('div');
-    message.className = 'message ' + (isUser ? 'user-message' : 'bot-message');
-    message.innerHTML = text;
-    chatMessages.appendChild(message);
-    chatMessages.scrollTop = chatMessages.scrollHeight;
+/* ── Active nav on scroll ── */
+const sections = [
+  { id: 'hero',         nl: 'nl-home' },
+  { id: 'services',     nl: 'nl-group' },
+  { id: 'puppy',        nl: 'nl-puppy' },
+  { id: 'behavior',     nl: 'nl-behavior' },
+  { id: 'about',        nl: 'nl-about' },
+  { id: 'blog',         nl: 'nl-blog' },
+];
+function updateNav() {
+  const y = window.scrollY + 140;
+  for (let i = sections.length - 1; i >= 0; i--) {
+    const el = document.getElementById(sections[i].id);
+    if (el && el.offsetTop <= y) {
+      document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+      const n = document.getElementById(sections[i].nl);
+      if (n) n.classList.add('active');
+      break;
+    }
   }
+}
+window.addEventListener('scroll', updateNav, { passive: true });
 
-  function getChatbotReply(text) {
-    const normalized = text.toLowerCase();
+/* ── Scroll reveal ── */
+document.querySelectorAll(
+  '.svc-card,.testi-card,.blog-card,.trust-badge,.after-item,.stat-card,.why-visual,.why-text'
+).forEach(el => el.classList.add('reveal'));
 
-    if (/\b(spa|tắm|cắt tỉa|cắt tỉa|tỉa)\b/.test(normalized)) {
-      return 'Dịch vụ Spa: Chúng tôi cung cấp tắm, sấy, chăm sóc lông và cắt tỉa tạo kiểu cho thú cưng với quy trình sạch sẽ và an toàn.';
-    }
-    if (/\b(giá|bao nhiêu|bảng giá|chi phí)\b/.test(normalized)) {
-      return 'Bảng giá Spa: Dưới 5kg 150k / cắt tỉa 300k; 5kg-10kg 250k / cắt tỉa 450k; 10kg-20kg 350k / cắt tỉa 600k. Trên 20kg giá sẽ báo sau khi kiểm tra.';
-    }
-    if (/\b(khuyến mãi|ưu đãi|giảm 20%|miễn phí tư vấn)\b/.test(normalized)) {
-      return 'Ưu đãi: Giảm 20% cho khách hàng mới và miễn phí tư vấn lần đầu. Liên hệ ngay để giữ chỗ!';
-    }
-    if (/\b(huấn luyện|training|chó con|puppy)\b/.test(normalized)) {
-      return 'Huấn luyện chó: Chúng tôi có chương trình Puppy Training, Group Obedience và Private Lessons để giúp thú cưng nghe lời và tự tin hơn.';
-    }
-    if (/\b(hung dữ|cắn|aggressive)\b/.test(normalized)) {
-      return 'Behavior Modification: Chúng tôi xử lý hành vi hung dữ, cắn bằng phương pháp tích cực, an toàn và theo dõi sát sao.';
-    }
-    if (/\b(liên hệ|số điện thoại|phone|call|liên hệ tư vấn)\b/.test(normalized)) {
-      return 'Liên hệ: (512) 796-5783. Gọi hoặc nhắn tin để được tư vấn nhanh nhất.';
-    }
-    if (/\b(email|e-mail|mail)\b/.test(normalized)) {
-      return 'Email: info@kimthedogtrainer.com. Gửi yêu cầu và chúng tôi sẽ trả lời sớm.';
-    }
-    if (/\b(giờ|mở cửa|open|hours)\b/.test(normalized)) {
-      return 'Giờ mở cửa: Mon - Sat 8AM - 7PM.';
-    }
-    return defaultReply;
-  }
-
-  function openChatbot() {
-    chatbot.classList.add('open');
-    chatbot.setAttribute('aria-hidden', 'false');
-    chatInput.focus();
-  }
-
-  function closeChatbotPanel() {
-    chatbot.classList.remove('open');
-    chatbot.setAttribute('aria-hidden', 'true');
-  }
-
-  function handleUserMessage(text) {
-    if (!text.trim()) {
-      return;
-    }
-    addChatMessage(text, true);
-    chatInput.value = '';
-    const reply = getChatbotReply(text);
-    setTimeout(() => addChatMessage(reply, false), 300);
-  }
-
-  chatToggle.addEventListener('click', openChatbot);
-  closeChat.addEventListener('click', closeChatbotPanel);
-
-  sendBtn.addEventListener('click', function () {
-    handleUserMessage(chatInput.value);
-  });
-
-  chatInput.addEventListener('keydown', function (event) {
-    if (event.key === 'Enter') {
-      event.preventDefault();
-      handleUserMessage(chatInput.value);
+new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 70);
     }
   });
+}, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' })
+  .observe.bind(
+    new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), i * 70);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' })
+  );
 
-  suggestionButtons.forEach((button) => {
-    button.addEventListener('click', function () {
-      const text = this.textContent.trim();
-      handleUserMessage(text);
-    });
+// Simpler reveal observer
+const ro = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); ro.unobserve(e.target); }
   });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 
+/* ── Toast ── */
+const toastEl = document.getElementById('toast');
+function showToast(msg, color) {
+  toastEl.textContent = msg;
+  toastEl.style.background = color || '#2d8a9e';
+  toastEl.classList.add('show');
+  setTimeout(() => toastEl.classList.remove('show'), 3600);
+}
+
+/* ── Consultation form ── */
+document.getElementById('consultForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const name  = document.getElementById('f-name').value.trim();
+  const email = document.getElementById('f-email').value.trim();
+  const phone = document.getElementById('f-phone').value.trim();
+  const dog   = document.getElementById('f-dog').value.trim();
+  const int_  = document.getElementById('f-interest').value;
+
+  if (!name || !email || !phone || !dog || !int_) {
+    showToast('Please fill in all fields.', '#c0392b'); return;
+  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    showToast('Please enter a valid email.', '#c0392b'); return;
+  }
+
+  const btn = document.getElementById('btnRequest');
+  btn.textContent = '✓ SENT!';
+  btn.style.background = '#449a38';
+  btn.disabled = true;
+  showToast(`Thanks ${name}! We'll be in touch soon.`);
+  setTimeout(() => {
+    e.target.reset();
+    btn.textContent = 'REQUEST NOW';
+    btn.style.background = '';
+    btn.disabled = false;
+  }, 4000);
+});
+
+/* ── Email subscribe form ── */
+document.getElementById('emailForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const v = document.getElementById('sub-email').value.trim();
+  if (!v || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) {
+    showToast('Enter a valid email.', '#c0392b'); return;
+  }
+  showToast('Subscribed! 🐾 Welcome to the pack.');
+  e.target.reset();
+});
+
+/* ── Play button (video placeholder) ── */
+const playBtn = document.querySelector('.play-btn');
+if (playBtn) {
+  playBtn.addEventListener('click', () => {
+    showToast('Video player coming soon! 🎬');
+  });
+}
+
+/* ── Blog dots ── */
+document.querySelectorAll('.dot').forEach((dot, i) => {
+  dot.addEventListener('click', () => {
+    document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+    dot.classList.add('active');
+  });
 });

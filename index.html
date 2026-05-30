@@ -1,378 +1,407 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kim The Dog Trainer | Austin Dog Training</title>
+  <title>Kim The Dog Trainer – Expert Dog Training, Austin Style</title>
+  <meta name="description" content="Kim The Dog Trainer offers expert dog training in Austin, TX. Group obedience, puppy training, behavior modification & more. Book a free consultation today!" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="topbar">
-    <p>Opening Hours: Mon - Sat 8AM - 7PM | Call: (512) 796-5783 | info@kimthedogtrainer.com</p>
-  </div>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#home" class="brand">
-        <span>Kim</span>
+<!-- ===================== TOP BAR ===================== -->
+<div class="topbar" id="topbar">
+  <div class="container topbar-inner">
+    <span class="tb-item">
+      <svg class="tb-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <strong>Opening Hours:</strong>&nbsp;MON – SUN 8am – 6pm
+    </span>
+    <div class="tb-right">
+      <a href="tel:5127965783" class="tb-item">
+        <svg class="tb-icon green" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        (512) 796-5783
       </a>
-      <button class="nav-toggle" aria-label="Open navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav class="site-nav">
-        <a href="#home">Homee</a>
-        <a href="#services">Group & Private Obedience</a>
-        <a href="#puppy">Puppy Training</a>
-        <a href="#why">Behavior Modification</a>
-        <a href="#about">About Us</a>
-        <a href="#blog">Blog</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-overlay"></div>
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <span class="eyebrow">Trusted Dog Training in Austin</span>
-          <h1>Expert Dog Training, Austin Style</h1>
-          <p>Building confident, calm dogs with positive, reward-based methods that work for every family and every breed.</p>
-          <div class="hero-highlights">
-            <div>
-              <strong>Certified Trainer</strong>
-              <p>National Canine Learning Center</p>
-            </div>
-            <div>
-              <strong>Personalized Sessions</strong>
-              <p>Group, private &amp; boarding programs</p>
-            </div>
-          </div>
-        </div>
-
-        <aside class="hero-form-card">
-          <div class="form-header">
-            <h2>Customized Consultation</h2>
-            <p>Start your dog�s training journey today.</p>
-          </div>
-          <form id="consultForm">
-            <label>
-              Your name
-              <input type="text" name="name" placeholder="Nguyen Van A" required />
-            </label>
-            <label>
-              Email address
-              <input type="email" name="email" placeholder="name@example.com" required />
-            </label>
-            <label>
-              Contact number
-              <input type="tel" name="phone" placeholder="(512) 796-5783" required />
-            </label>
-            <label>
-              Your dog�s name, age &amp; breed
-              <input type="text" name="dog" placeholder="Bella, 2 years, Labrador" required />
-            </label>
-            <label>
-              I�m interested in...
-              <select name="interest" required>
-                <option value="">Choose one</option>
-                <option value="puppy-training">Puppy Training</option>
-                <option value="group-obedience">Group Obedience</option>
-                <option value="private-lessons">Private Lessons</option>
-                <option value="board-train">Board &amp; Train</option>
-              </select>
-            </label>
-            <button type="submit" class="btn btn-primary">Request Now</button>
-          </form>
-        </aside>
-      </div>
-    </section>
-
-    <section class="services" id="services">
-      <div class="container section-intro">
-        <p class="section-label">What We Do</p>
-        <h2>Services We Offer</h2>
-      </div>
-      <div class="container service-grid">
-        <article class="service-card">
-          <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=900&q=80" alt="Puppy Training" />
-          <div class="service-copy">
-            <h3>Puppy Training</h3>
-            <p>Early socialization, house manners, and playful obedience for your new family member.</p>
-          </div>
-        </article>
-        <article class="service-card">
-          <img src="https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&w=900&q=80" alt="Group Obedience" />
-          <div class="service-copy">
-            <h3>Group Obedience Training</h3>
-            <p>Structured classes that build confidence, focus, and reliable behavior around other dogs.</p>
-          </div>
-        </article>
-        <article class="service-card">
-          <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=900&q=80" alt="Private Lessons" />
-          <div class="service-copy">
-            <h3>Private Lessons</h3>
-            <p>One-on-one coaching for targeted behaviors, tailored to your dog's individual needs.</p>
-          </div>
-        </article>
-        <article class="service-card">
-          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80" alt="Board and Train" />
-          <div class="service-copy">
-            <h3>Board &amp; Train</h3>
-            <p>Intensive boarding programs with daily training, structure, and follow-up support.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="why-choose" id="why">
-      <div class="container why-grid">
-        <div class="why-media">
-          <img src="https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&w=900&q=80" alt="Dog training walk" />
-        </div>
-        <div class="why-copy">
-          <p class="section-label">Why Choose Kim</p>
-          <h2>Why Choose Kim</h2>
-          <p>Kim delivers compassionate, professional training that respects your dog�s needs and builds long-term trust with every leash walk, lesson, and lifestyle goal.</p>
-          <ul class="checklist">
-            <li>Positive, Force Free, Reward Based Training</li>
-            <li>Multiple Training Methods &amp; Training Guarantee</li>
-            <li>Specializes in Aggressive Behaviors</li>
-            <li>Certified from National Canine Learning Center</li>
-            <li>No Discrimination For Any Dog Behavior or Breed</li>
-            <li>5 Star Reviews from Happy Dog Owners</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="dark-cta">
-      <div class="container cta-grid">
-        <div>
-          <h2>Give us a call <span>(512) 796-5783</span></h2>
-          <p>Speak with a trainer and find the best program for your dog�s temperament.</p>
-        </div>
-        <a href="#consultForm" class="btn btn-secondary">Request a Consultation</a>
-      </div>
-    </section>
-
-    <section class="classes">
-      <div class="container section-intro">
-        <p class="section-label">Upcoming Programs</p>
-        <h2>Schedule &amp; Upcoming Classes</h2>
-      </div>
-      <div class="container classes-grid">
-        <div class="chalkboard-card">
-          <h3>Puppy Start Right Preschool</h3>
-          <p>Intro to commands, social focus, and confident puppy habits.</p>
-        </div>
-        <div class="chalkboard-card">
-          <h3>Middle School</h3>
-          <p>Working obedience, impulse control, and social manners.</p>
-        </div>
-        <div class="chalkboard-card">
-          <h3>Finishing School</h3>
-          <p>Advanced skills, public outings, and real world reliability.</p>
-        </div>
-        <div class="chalkboard-card">
-          <h3>Upcoming Classes</h3>
-          <p>New sessions released weekly for all breeds and levels.</p>
-        </div>
-      </div>
-      <p class="classes-tagline">ALL BREEDS � ALL SIZES � ALL TEMPERAMENTS</p>
-    </section>
-
-    <section class="after-training" id="about">
-      <div class="container section-intro">
-        <p class="section-label">Transformation</p>
-        <h2>After Our Training</h2>
-      </div>
-      <div class="container after-grid">
-        <div class="after-panel">
-          <div class="after-icon">??</div>
-          <h3>Greeting People Politely</h3>
-        </div>
-        <div class="after-circle">
-          <img src="https://images.unsplash.com/photo-1518725522904-4b3939358342?auto=format&fit=crop&w=800&q=80" alt="Dog happy" />
-        </div>
-        <div class="after-panel">
-          <div class="after-icon">??</div>
-          <h3>Going for Relaxed Walks</h3>
-        </div>
-        <div class="after-panel">
-          <div class="after-icon">??</div>
-          <h3>Accepting Grooming &amp; Veterinary Care</h3>
-        </div>
-        <div class="after-panel">
-          <div class="after-icon">???</div>
-          <h3>Playing at the Park</h3>
-        </div>
-        <div class="after-panel">
-          <div class="after-icon">??</div>
-          <h3>Going to Restaurants</h3>
-        </div>
-        <div class="after-panel">
-          <div class="after-icon">??</div>
-          <h3>Getting the Right Attention</h3>
-        </div>
-      </div>
-    </section>
-
-    <section class="licenses">
-      <div class="container licenses-inner">
-        <h2>Licenses &amp; Certifications</h2>
-        <div class="license-grid">
-          <span>National Canine Learning Center</span>
-          <span>Force-Free Accreditation</span>
-          <span>Behavior Specialist</span>
-          <span>Professional Pet Care Association</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="testimonials">
-      <div class="container section-intro">
-        <p class="section-label">What Clients Say</p>
-        <h2>Our Satisfied Customers</h2>
-      </div>
-      <div class="container testimonial-grid">
-        <article class="testimonial-card">
-          <div class="testimonial-avatar"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" alt="Customer avatar" /></div>
-          <div class="stars">?????</div>
-          <p>Kim transformed our reactive dog into a calm family member. The training plan was gentle, effective, and easy to follow.</p>
-          <h4>Lan Nguyen</h4>
-        </article>
-        <article class="testimonial-card">
-          <div class="testimonial-avatar"><img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=200&q=80" alt="Customer avatar" /></div>
-          <div class="stars">?????</div>
-          <p>The puppy classes were incredible. We saw real progress in just a few sessions and our pup enjoys training now.</p>
-          <h4>Minh Tran</h4>
-        </article>
-        <article class="testimonial-card">
-          <div class="testimonial-avatar"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&q=80" alt="Customer avatar" /></div>
-          <div class="stars">?????</div>
-          <p>From leash manners to greeting guests politely, Kim�s guidance gave us confidence and our dog the structure he needed.</p>
-          <h4>Hoa Pham</h4>
-        </article>
-      </div>
-    </section>
-
-    <section class="blog" id="blog">
-      <div class="container section-intro">
-        <p class="section-label">Stories &amp; Tips</p>
-        <h2>From Our Blog</h2>
-      </div>
-      <div class="container blog-grid">
-        <article class="blog-card">
-          <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=900&q=80" alt="Choosing a collar" />
-          <div class="blog-copy">
-            <h3>Choosing a Collar for Your Dog</h3>
-            <p>An easy guide to safe and comfortable equipment for every size and breed.</p>
-          </div>
-        </article>
-        <article class="blog-card">
-          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=900&q=80" alt="Dog aggression" />
-          <div class="blog-copy">
-            <h3>Causes of Aggression</h3>
-            <p>Learn the underlying reasons for aggressive behavior and how positive training helps.</p>
-          </div>
-        </article>
-        <article class="blog-card">
-          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Building relationship" />
-          <div class="blog-copy">
-            <h3>Building a Relationship Before Training</h3>
-            <p>Trust comes first. Discover why relationship-building matters more than commands.</p>
-          </div>
-        </article>
-        <article class="blog-card">
-          <img src="https://images.unsplash.com/photo-1507149833265-60c372daea22?auto=format&fit=crop&w=900&q=80" alt="Dog parks" />
-          <div class="blog-copy">
-            <h3>Dog Parks</h3>
-            <p>Make park visits enjoyable and safe with these simple etiquette tips.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="footer-cta">
-      <div class="container footer-cta-inner">
-        <div class="footer-cta-copy">
-          <div class="footer-cta-icon">??</div>
-          <div>
-            <h2>Set up a free consultation to see what level of dog training your best friend needs.</h2>
-          </div>
-        </div>
-        <a href="#consultForm" class="btn btn-primary">Request a Consultation</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h4>Call Us</h4>
-        <p>(512) 796-5783</p>
-      </div>
-      <div>
-        <h4>Email Us</h4>
-        <p>info@kimthedogtrainer.com</p>
-      </div>
-      <div>
-        <h4>Follow Us</h4>
-        <p>Facebook | Instagram | LinkedIn | Twitter | YouTube</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>� 2026 Kim The Dog Trainer. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <!-- Chatbot AI nổi góc phải dưới -->
-  <button class="chat-toggle" id="chatToggle" aria-label="Open chat">Chat</button>
-
-  <div class="chatbot" id="chatbot" aria-hidden="true">
-    <div class="chat-header">
-      <div class="chat-header-left">
-        <div class="chat-avatar">🤖</div>
-        <div>
-          <h3>Pawsie Assistant</h3>
-          <p>Tư vấn viên AI trực tuyến 24/7</p>
-        </div>
-      </div>
-      <button class="close-chat" id="closeChat" aria-label="Close chat">&times;</button>
-    </div>
-
-    <div class="chat-body">
-      <div class="chat-messages" id="chatMessages">
-        <div class="message bot-message">
-          🐶 <strong>BẢNG GIÁ SPA</strong><br><br>
-          • Dưới 5kg: Gói tắm 150k | Gói cắt tỉa tạo kiểu 300k<br>
-          • Từ 5kg - 10kg: Gói tắm 250k | Gói cắt tỉa tạo kiểu 450k<br>
-          • Từ 10kg - 20kg: Gói tắm 350k | Gói cắt tỉa tạo kiểu 600k<br>
-          • Đối với cún trên 20kg hoặc lông rối nặng, các chuyên gia sẽ báo giá trực tiếp sau khi kiểm tra tình trạng lông.
-        </div>
-      </div>
-
-      <div class="chat-suggestions">
-        <button type="button" class="suggestion-btn">Dịch vụ Spa</button>
-        <button type="button" class="suggestion-btn">🎁 Khuyến mãi hot</button>
-        <button type="button" class="suggestion-btn">💰 Bảng giá Spa</button>
-        <button type="button" class="suggestion-btn">Huấn luyện chó</button>
-        <button type="button" class="suggestion-btn">Liên hệ tư vấn</button>
-      </div>
-    </div>
-
-    <div class="chat-footer">
-      <input type="text" id="chatInput" placeholder="Hỏi Pawsie về Spa & Ưu đãi..." autocomplete="off" />
-      <button type="button" id="sendBtn" aria-label="Send message">➤</button>
+      <a href="mailto:info@kimthedogtrainer.com" class="tb-item">
+        <svg class="tb-icon green" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        info@kimthedogtrainer.com
+      </a>
     </div>
   </div>
+</div>
 
-  <script src="script.js"></script>
+<!-- ===================== NAVBAR ===================== -->
+<header class="navbar" id="navbar">
+  <div class="container navbar-inner">
+    <a href="#" class="logo-link">
+      <img src="images/logo.png" alt="Kim The Dog Trainer" class="logo-img" />
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#hero"     class="nav-link active"  id="nl-home">HOME</a>
+      <a href="#services" class="nav-link"          id="nl-group">GROUP &amp; PRIVATE OBEDIENCE</a>
+      <a href="#puppy"    class="nav-link"          id="nl-puppy">PUPPY TRAINING</a>
+      <a href="#behavior" class="nav-link"          id="nl-behavior">BEHAVIOR MODIFICATION</a>
+      <a href="#about"    class="nav-link"          id="nl-about">ABOUT US</a>
+      <a href="#blog"     class="nav-link"          id="nl-blog">BLOG</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <img src="images/hero.png" alt="Kim with her Husky" class="hero-img" />
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="container hero-content">
+    <div class="hero-text">
+      <h1 class="hero-title">Expert Dog Training,<br /><span class="hero-big">AUSTIN STYLE</span></h1>
+    </div>
+    <div class="consult-card" id="consultation">
+      <h2 class="consult-title">CUSTOMIZED<br />CONSULTATION</h2>
+      <form class="consult-form" id="consultForm" novalidate>
+        <input type="text"  id="f-name"    class="c-inp" placeholder="Your name"            required />
+        <input type="email" id="f-email"   class="c-inp" placeholder="Email address"        required />
+        <input type="tel"   id="f-phone"   class="c-inp" placeholder="Contact number"       required />
+        <input type="text"  id="f-dog"     class="c-inp" placeholder="Your dog's name, age &amp; breed" required />
+        <div class="sel-wrap">
+          <select id="f-interest" class="c-inp c-sel" required>
+            <option value="" disabled selected>I'm interested in...</option>
+            <option>Group Obedience</option>
+            <option>Private Obedience</option>
+            <option>Puppy Training</option>
+            <option>Behavior Modification</option>
+            <option>Other</option>
+          </select>
+          <svg class="sel-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <button type="submit" class="btn-request" id="btnRequest">REQUEST NOW</button>
+        <p class="c-privacy">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          WE DO NOT SHARE YOUR INFORMATION
+        </p>
+      </form>
+    </div>
+  </div>
+  <div class="picket-fence"></div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section class="services-sec" id="services">
+  <div class="container">
+    <h2 class="sec-title">Services We Offer</h2>
+    <div class="svc-grid">
+      <div class="svc-card" id="svc-puppy">
+        <div class="svc-img-wrap"><img src="images/svc_puppy.png"     alt="Puppy Training" /></div>
+        <div class="svc-tag green-tag">Puppy Training</div>
+      </div>
+      <div class="svc-card" id="svc-group">
+        <div class="svc-img-wrap"><img src="images/svc_obedience.png" alt="Group Obedience" /></div>
+        <div class="svc-tag green-tag">Group Obedience</div>
+      </div>
+      <div class="svc-card" id="svc-private">
+        <div class="svc-img-wrap"><img src="images/svc_private.png"   alt="Private Lessons" /></div>
+        <div class="svc-tag green-tag">Private Lessons</div>
+      </div>
+      <div class="svc-card" id="svc-board">
+        <div class="svc-img-wrap"><img src="images/svc_behavior.png"  alt="Board &amp; Train" /></div>
+        <div class="svc-tag green-tag">Board &amp; Train</div>
+      </div>
+    </div>
+    <p class="svc-note">Sign up for a complimentary consultation or give us a call <a href="tel:5127965783">(512) 796-5783</a></p>
+  </div>
+</section>
+
+<!-- ===================== WHY CHOOSE KIM ===================== -->
+<section class="why-sec" id="about">
+  <div class="container why-inner">
+    <div class="why-visual">
+      <div class="why-video-wrap">
+        <img src="images/hero.png" alt="Kim training a dog" class="why-img" />
+        <button class="play-btn" aria-label="Play video">
+          <svg viewBox="0 0 24 24" fill="white" width="26" height="26"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="why-text">
+      <h2 class="why-heading">Why Choose Kim</h2>
+      <p class="why-desc">Kim uses positive, science-based methods to build real, lasting results. She has worked with thousands of dogs and their families across Austin and surrounding areas, helping them achieve a happier, more harmonious life together.</p>
+      <ul class="why-list">
+        <li><span class="chk"></span>Certified Professional Dog Trainer (CPDT-KA)</li>
+        <li><span class="chk"></span>100% Positive Reinforcement Methods</li>
+        <li><span class="chk"></span>Personalized Training Plans for Every Dog</li>
+        <li><span class="chk"></span>Customized Behavior Modification Programs</li>
+        <li><span class="chk"></span>Group &amp; Private Obedience Classes Available</li>
+        <li><span class="chk"></span>Board &amp; Train Programs</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA BANNER ===================== -->
+<section class="cta-banner" id="behavior">
+  <div class="container cta-inner">
+    <div class="cta-icons">
+      <div class="cta-ic"><div class="cta-circle">🐕</div><span>Group<br/>Obedience</span></div>
+      <div class="cta-ic"><div class="cta-circle">🐾</div><span>Puppy<br/>Training</span></div>
+      <div class="cta-ic"><div class="cta-circle">🧠</div><span>Behavior<br/>Mod.</span></div>
+      <div class="cta-ic"><div class="cta-circle">🏠</div><span>Board &amp;<br/>Train</span></div>
+    </div>
+    <a href="#consultation" class="btn-cta">SCHEDULE A FREE CONSULTATION</a>
+  </div>
+</section>
+
+<!-- ===================== SCHEDULE ===================== -->
+<section class="schedule-sec" id="puppy">
+  <div class="container">
+    <h2 class="sec-title">Schedule &amp; Upcoming Classes</h2>
+    <div class="chalkboard">
+      <div class="chalk-grid">
+        <div class="chalk-col">
+          <h3 class="chalk-head">Puppy Kindergarten</h3>
+          <p>Tuesdays &amp; Thursdays</p>
+          <p>6:00 PM – 7:00 PM</p>
+          <p class="chalk-note">Ages 8–16 weeks</p>
+        </div>
+        <div class="chalk-col">
+          <h3 class="chalk-head">Basic Obedience</h3>
+          <p>Saturdays</p>
+          <p>9:00 AM – 10:30 AM</p>
+          <p class="chalk-note">All breeds welcome</p>
+        </div>
+        <div class="chalk-col">
+          <h3 class="chalk-head">Advanced Obedience</h3>
+          <p>Saturdays</p>
+          <p>11:00 AM – 12:30 PM</p>
+          <p class="chalk-note">Must complete Basic first</p>
+        </div>
+        <div class="chalk-col">
+          <h3 class="chalk-head">Private Sessions</h3>
+          <p>By Appointment</p>
+          <p>Mon – Fri</p>
+          <p class="chalk-note">Flexible scheduling</p>
+        </div>
+      </div>
+      <div class="chalk-tags">
+        <span>ALL LEVELS</span>
+        <span>ALL BREEDS</span>
+        <span>ALL TEMPERAMENTS</span>
+      </div>
+      <div class="chalk-dogs">🐕 🐩 🐕‍🦺 🦮 🐾</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AFTER TRAINING ===================== -->
+<section class="after-sec" id="after">
+  <div class="container">
+    <h2 class="sec-title">After Our Training</h2>
+    <p class="sec-sub">Your dog will come home with these amazing new skills — and a whole new confidence.</p>
+    <div class="after-wheel">
+      <div class="after-col after-left">
+        <div class="after-item"><div class="aft-ic">🐕</div><div class="aft-txt"><strong>Loose-Leash Walking</strong><p>No more pulling on walks</p></div></div>
+        <div class="after-item"><div class="aft-ic">🎯</div><div class="aft-txt"><strong>Reliable Recall</strong><p>Come when called every time</p></div></div>
+        <div class="after-item"><div class="aft-ic">🛑</div><div class="aft-txt"><strong>Sit &amp; Stay</strong><p>Solid obedience commands</p></div></div>
+      </div>
+      <div class="after-center">
+        <div class="after-dog-circle">
+          <img src="images/svc_puppy.png" alt="Happy trained dog" />
+        </div>
+      </div>
+      <div class="after-col after-right">
+        <div class="after-item after-item-r"><div class="aft-txt right-txt"><strong>Socialization Skills</strong><p>Friendly with dogs &amp; people</p></div><div class="aft-ic">🤝</div></div>
+        <div class="after-item after-item-r"><div class="aft-txt right-txt"><strong>Focus &amp; Attention</strong><p>Responds to your cues</p></div><div class="aft-ic">👁️</div></div>
+        <div class="after-item after-item-r"><div class="aft-txt right-txt"><strong>Calm Behavior</strong><p>Reduced anxiety &amp; stress</p></div><div class="aft-ic">😌</div></div>
+      </div>
+    </div>
+    <p class="after-cta-text">Schedule your free consultation or give us a call <a href="tel:5127965783">(512) 796-5783</a></p>
+  </div>
+</section>
+
+<!-- ===================== TRUST BADGES ===================== -->
+<section class="trust-sec">
+  <div class="container trust-inner">
+    <div class="trust-badge"><div class="badge-circle">NACSW</div><span>Certified</span></div>
+    <div class="trust-badge"><div class="badge-circle">APDT</div><span>Member</span></div>
+    <div class="trust-badge"><div class="badge-circle">CPDT<br/>KA</div><span>Certified</span></div>
+    <div class="trust-badge"><div class="badge-circle">AVSAB</div><span>Aligned</span></div>
+    <div class="trust-badge"><div class="badge-circle">CCT</div><span>Certified</span></div>
+  </div>
+</section>
+
+<!-- ===================== TESTIMONIALS ===================== -->
+<section class="testi-sec" id="testimonials">
+  <div class="container">
+    <h2 class="sec-title">Our Satisfied Customers</h2>
+    <p class="sec-sub">We are very proud and honored to share some of the wonderful results our clients have experienced.</p>
+    <div class="testi-grid">
+      <div class="testi-card" id="testi-1">
+        <div class="testi-head">
+          <div class="testi-avatar">🧑</div>
+          <div><strong>Sarah M.</strong><br/><span>Austin, TX</span></div>
+        </div>
+        <div class="testi-stars">★★★★★</div>
+        <p>"Kim completely transformed our rescue dog Max. He went from uncontrollable lunging to walking calmly on leash in just 4 weeks. Absolute miracle worker!"</p>
+      </div>
+      <div class="testi-card" id="testi-2">
+        <div class="testi-head">
+          <div class="testi-avatar">👩</div>
+          <div><strong>James &amp; Linda K.</strong><br/><span>Round Rock, TX</span></div>
+        </div>
+        <div class="testi-stars">★★★★★</div>
+        <p>"Our Husky was a handful but Kim's patience and expertise made all the difference. The puppy classes were worth every penny. Highly recommend!"</p>
+      </div>
+      <div class="testi-card" id="testi-3">
+        <div class="testi-head">
+          <div class="testi-avatar">👨</div>
+          <div><strong>Roberto V.</strong><br/><span>Cedar Park, TX</span></div>
+        </div>
+        <div class="testi-stars">★★★★★</div>
+        <p>"The behavior modification program saved our dog's life. Kim addressed his aggression issues professionally and compassionately. We're forever grateful."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BLOG ===================== -->
+<section class="blog-sec" id="blog">
+  <div class="container">
+    <h2 class="sec-title">From Our Blog</h2>
+    <div class="blog-grid">
+      <article class="blog-card" id="blog-1">
+        <div class="blog-img-wrap"><img src="images/blog1.png" alt="Dog collar article" /></div>
+        <div class="blog-body">
+          <span class="blog-cat">Training Tips</span>
+          <h3>Choosing the Right Collar for Your Dog</h3>
+          <p>Not all collars are created equal. Learn which collar type is safest and most effective for your dog's size and temperament.</p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </article>
+      <article class="blog-card" id="blog-2">
+        <div class="blog-img-wrap"><img src="images/blog2.png" alt="Dog expression article" /></div>
+        <div class="blog-body">
+          <span class="blog-cat">Dog Behavior</span>
+          <h3>Understanding Your Dog's Expressions</h3>
+          <p>Learn to read the subtle signals your dog sends every day and deepen your communication and bond with them.</p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </article>
+      <article class="blog-card" id="blog-3">
+        <div class="blog-img-wrap"><img src="images/blog3.png" alt="Treat training article" /></div>
+        <div class="blog-body">
+          <span class="blog-cat">Puppy Care</span>
+          <h3>Building Good Habits with Treat Rewards</h3>
+          <p>Positive reinforcement with treats is powerful — when used correctly. Here's how to train smart and avoid over-treating.</p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </article>
+      <article class="blog-card" id="blog-4">
+        <div class="blog-img-wrap"><img src="images/blog4.png" alt="Dog park article" /></div>
+        <div class="blog-body">
+          <span class="blog-cat">Socialization</span>
+          <h3>Dog Park Do's and Don'ts</h3>
+          <p>Dog parks can be wonderful — or overwhelming. Follow these tips to make every visit safe and enjoyable for your pup.</p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </article>
+    </div>
+    <div class="blog-dots">
+      <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER EMAIL BAR ===================== -->
+<div class="email-bar">
+  <div class="container email-bar-inner">
+    <div class="email-bar-left">
+      <div class="email-dog-icon">🐕</div>
+      <p>Sign up for our emails to stay in the know about all that we do! Keep training going &amp; get valuable tips in your inbox.</p>
+    </div>
+    <form class="email-form" id="emailForm">
+      <input type="email" id="sub-email" placeholder="Your email address" class="email-inp" required />
+      <button type="submit" class="btn-sub" id="btnSub">FREE CONSULTATION</button>
+    </form>
+  </div>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer" id="footer">
+  <div class="container footer-grid">
+    <div class="fc">
+      <img src="images/logo.png" alt="Kim The Dog Trainer" class="f-logo" />
+      <p>Expert dog training in Austin, TX. Building confident dogs and happy families since 2009.</p>
+      <div class="social-row">
+        <a href="#" class="soc-btn" aria-label="Facebook">f</a>
+        <a href="#" class="soc-btn" aria-label="Twitter">𝕏</a>
+        <a href="#" class="soc-btn" aria-label="Instagram">📷</a>
+        <a href="#" class="soc-btn" aria-label="YouTube">▶</a>
+      </div>
+    </div>
+    <div class="fc">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#consultation">Contact</a></li>
+      </ul>
+    </div>
+    <div class="fc">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">Group Obedience</a></li>
+        <li><a href="#">Puppy Training</a></li>
+        <li><a href="#">Behavior Modification</a></li>
+        <li><a href="#">Board &amp; Train</a></li>
+        <li><a href="#">Private Lessons</a></li>
+      </ul>
+    </div>
+    <div class="fc">
+      <h4>Contact Us</h4>
+      <ul class="fc-contact">
+        <li>
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          (512) 796-5783
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@kimthedogtrainer.com
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Austin, Texas
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Mon–Sun: 8am – 6pm
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">© 2026 Kim The Dog Trainer. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<!-- ===================== STICKY BOTTOM BAR ===================== -->
+<div class="sticky-bar" id="stickyBar">
+  <a href="tel:5127965783" class="sticky-phone">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    (512) 796-5783
+  </a>
+  <a href="#consultation" class="sticky-consult">FREE CONSULTATION →</a>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
 </body>
 </html>
