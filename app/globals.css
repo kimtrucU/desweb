@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Google fonts – same as the original site */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600&display=swap');
+
+/* Global typography */
+html, body {
+  @apply font-opensans antialiased text-gray-800 bg-white;
+}
+
+/* Smooth scroll for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Container max‑width – matches the original layout */
+.container {
+  @apply max-w-7xl mx-auto px-4;
+}
