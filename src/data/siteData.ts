@@ -68,11 +68,21 @@ export const schedule: ScheduleItem[] = [
   { date: "Jun 15", title: "Behavior Reset", time: "6:00 PM – 8:00 PM" },
 ];
 
-export const afterTraining = [
-  "Improved obedience and confidence",
-  "Stronger bond with your dog",
-  "Reduced problem behaviours",
-  "Happy, well‑adjusted pet",
+export interface SkillItem {
+  icon: string;
+  title: string;
+  desc: string;
+}
+
+export const afterTraining: SkillItem[] = [
+  // LEFT column
+  { icon: "🐕", title: "Loose-Leash Walking",  desc: "No more pulling on walks" },
+  { icon: "🎯", title: "Reliable Recall",       desc: "Come when called every time" },
+  { icon: "🪬", title: "Sit & Stay",            desc: "Solid obedience commands" },
+  // RIGHT column
+  { icon: "🤝", title: "Socialization Skills",  desc: "Friendly with dogs & people" },
+  { icon: "👁️", title: "Focus & Attention",      desc: "Responds to your cues" },
+  { icon: "😌", title: "Calm Behavior",          desc: "Reduced anxiety & stress" },
 ];
 
 export const badges = [
