@@ -56,7 +56,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <div className="relative h-12 w-12 overflow-hidden rounded-full shadow-md">
-              <Image src="/images/logo.png" alt="Logo" fill />
+              <Image src="/images/logo.png" alt="Logo" width={48} height={48} />
             </div>
           </Link>
 

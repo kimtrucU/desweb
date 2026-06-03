@@ -11,3 +11,7 @@ yarn-error.log
 .env
 # VS Code settings
 .vscode/
+
+# Next.js
+.next/
+out/
