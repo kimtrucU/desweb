@@ -1,54 +1,9 @@
-/* Google fonts — must come BEFORE @tailwind directives */
+/* Google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Open+Sans:wght@400;600&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Global typography */
-html, body {
-  @apply font-opensans antialiased text-gray-800 bg-white overflow-x-hidden;
-}
+@import './style.css';
 
 /* Smooth scroll for anchor links */
 html {
   scroll-behavior: smooth;
-}
-
-/* Container max-width – matches the original layout */
-.container {
-  @apply max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-7;
-}
-
-/* Ensure page content isn't hidden behind sticky bottom bar */
-body {
-  @apply pb-24;
-}
-
-/* ── Scroll-triggered entrance animation ── */
-.animate-on-scroll {
-  opacity: 0;
-  transform: translateY(36px);
-  transition: opacity 0.65s ease, transform 0.65s ease;
-}
-
-.animate-on-scroll.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Stagger delays */
-.animate-on-scroll.delay-100 { transition-delay: 0.10s; }
-.animate-on-scroll.delay-200 { transition-delay: 0.20s; }
-.animate-on-scroll.delay-300 { transition-delay: 0.30s; }
-.animate-on-scroll.delay-400 { transition-delay: 0.40s; }
-.animate-on-scroll.delay-500 { transition-delay: 0.50s; }
-
-/* Fade-in only variant (for headings) */
-.animate-fade {
-  opacity: 0;
-  transition: opacity 0.7s ease;
-}
-.animate-fade.is-visible {
-  opacity: 1;
 }
