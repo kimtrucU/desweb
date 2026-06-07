@@ -17,7 +17,7 @@ body = body.replace(/<input([^>]*?)(?<!\/)>/g, '<input$1 />');
 body = body.replace(/<br>/g, '<br />');
 body = body.replace(/<hr>/g, '<hr />');
 body = body.replace(/style=\"([^\"]*)\"/g, (match, p1) => {
-  return 'style={{' + p1.split(';').filter(s=>s.trim()).map(s => {
+  return 'style={{' + p1.split(';').filter(s => s.trim()).map(s => {
     let parts = s.split(':');
     let key = parts[0].trim().replace(/-([a-z])/g, (g) => g[1].toUpperCase());
     let value = parts[1].trim();
